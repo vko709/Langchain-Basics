@@ -21,7 +21,7 @@ if __name__ == "__main__":
     llm = ChatOllama(model="mistral")
 
     chain = summary_prompt_template | llm | StrOutputParser()
-    linkedin_data = scrape_linkedin_profile(linkedin_profile_url="https://www.linkedin.com/in/priyanshi-saxena-640b37215/", mock=True)
+    linkedin_data = scrape_linkedin_profile(linkedin_profile_url="https://www.linkedin.com/in/vko709/", mock=True)
 
     res = chain.invoke(input={"information": linkedin_data})
 
